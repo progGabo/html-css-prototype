@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="css/reg.css" />
+    </head>
+    <body class="desktop">
+
+        <div class="container-popup" id="popup">
+            <div class="pop-up">
+              <div class="mail">Zadaj svoj email</div>
+              <input class="input-email" placeholder="Email"></input>
+              <a class="buttn" href="reg.html"> Pokračovať </a> 
+            </div>
+          </div>
+
+        <header class="header">
+            <a class="text-logo" href="maiin.html">
+              <div class="f-od">Food</div>
+            </a>
+            <div class="login text-login" style="margin-left: auto;">Prihlásiť sa</div>
+            
+            <div class="login text-login" onclick="popUp()">Registrovať</div>
+            <div class="shopping-bag-icon"></div>
+          </header>
+
+        <div class="text-title">Osobné údaje</div>
+
+        <div class="container">
+            <div class="frame-person">
+                <input class="bar-input-name text-input" placeholder="Meno"></input>
+                <input class="bar-input-surname text-input" placeholder="Priezvisko"></input>
+                <input class="bar-input-phone text-input" placeholder="Tel. Číslo"></input>
+            </div>
+        </div>
+
+        <div class="text-title">Adresa</div>
+
+        <div class="container">
+            <div class="frame-adress">
+                <input class="bar-input-street text-input" placeholder="Ulica"></input>
+                <input class="bar-input-floor text-input" placeholder="Poschodie"></input>
+                <input class="bar-input-city text-input" placeholder="Mesto"></input>
+                <input class="bar-input-num text-input" placeholder="PSČ"></input>
+            </div>
+        </div>
+        
+        <div class="text-title">Spôsob platby</div>
+        
+        <div class="container">
+            <div class="frame-pay">
+                <div class="checkbox" id="tipCheck1" onclick="updateCheckBox('tipCheck1')"></div>
+                <div class="opt-card-online"><div class="text-input">Pridať platobnú kartu</div></div>
+                <div class="checkbox" id="tipCheck2" onclick="updateCheckBox('tipCheck2')"></div>
+                <div class="opt-later"><div class="text-input">Pridať neskôr</div></div>
+            </div>
+        </div>
+
+        <a class="buttn" href="endreg.html">Registrovať</a>
+        
+        <div class="footer">
+            <div class="socials">
+              <img class="youtube" src="source_img/youtube.png" />
+              <img class="img" src="source_img/facebook.png" />
+              <img class="img" src="source_img/instagram.png" />
+            </div>
+          </div>
+    </body>
+    <script src="script/script.js"></script>
+</html>

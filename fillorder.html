@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="css/fillorder.css" />
+  </head>
+  <body class="desktop">
+
+    <div class="container-popup" id="popup">
+      <div class="pop-up">
+        <div class="mail">Zadaj svoj email</div>
+        <input class="input-email" placeholder="Email"></input>
+        <a class="buttn" href="reg.html"> Pokračovať </a> 
+      </div>
+    </div>
+
+    <header class="header">
+      <a class="text-logo" href="maiin.html">
+        <div class="f-od">Food</div>
+      </a>
+      <div class="login text-login" style="margin-left: auto;">Prihlásiť sa</div>
+      
+      <div class="login text-login" onclick="popUp()">Registrovať</div>
+      <div class="shopping-bag-icon"></div>
+    </header>
+
+    <div style="display: flex; ">
+      <div style="display: flex; flex-direction: column; margin: auto;">
+        <div class="text-title">Adresa doručenia</div>
+        <div class="input-frame">
+          <input class="frame-street text-input" placeholder="Ulica"></input>
+          <div style="display: flex;">
+              <input class="frame-city text-input" placeholder="Mesto"></input>
+              <input class="frame-num text-input" placeholder="PSČ"></input>
+          </div>    
+          <input class="frame-floor text-input" placeholder="Poschodie (voliteľné)"></input>
+        </div>
+
+        <div class="text-title">Osobné údaje</div>
+          <div class="input-frame">
+            <div style="display: flex;">
+              <input class="frame-name text-input" placeholder="Meno"></input>
+              <input class="frame-surname text-input" placeholder="Priezvisko"></input>
+            </div>
+            <input class="frame-email text-input" placeholder="Email"></input>
+            <input class="frame-phone text-input" placeholder="Tel. číslo"></input>
+          </div>
+        
+        <div class="text-title">Platba</div>
+        <div class="input-frame">
+          <div style="display: flex;">
+            <div class="check"></div>
+            <div class="frame-pay-opt"><div class="text-pay-opt">Platba kartou online</div></div>
+          </div>
+          <div style="display: flex;">
+            <div class="check"></div>
+            <div class="frame-pay-opt"><div class="text-pay-opt">Platba kartou kurierovy</div></div>
+          </div>
+          <div style="display: flex;">
+            <div class="check" id="tipCheck" onclick="updateCheckBox('tipCheck')"></div>
+            <div class="frame-pay-opt"><div class="text-pay-opt">Platba v hotovosti kurierovy</div></div>
+          </div>
+        </div>
+
+        <div class="text-title">Prepitné kurierovy</div>
+        <div class="frame-tip">
+          <div class="button-tip"><div class="text-tip-button">1,00€</div></div>
+          <div class="button-tip" onclick="updateCheckBox('tip')" id="tip"><div class="text-tip-button">2,00€</div></div>
+          <div class="button-tip"><div class="text-tip-button">3,00€</div></div>
+          <div class="button-tip"><div class="text-tip-button">5,00€</div></div>
+        </div>
+
+
+        <div class="accept-frame">
+          <div style="display: flex;">
+            <div class="chceck-accept" onclick="updateCheckBox('check1')" id="check1"></div>
+            <div class="text-accept-check">Súhlasím so spracovaním osobných údajov</div>
+          </div>
+          <div style="display: flex;" style="margin-top: 8%;">
+            <div class="chceck-accept" style="margin-top: 7%;" onclick="updateCheckBox('check2')" id="check2"></div>
+            <div class="text-accept-check" style="margin-top: 8%;">Súhlasím s obchodnými podmienkami</div>
+          </div>
+        </div>
+        
+        <a class="button-order" href="endorder.html">Objednať</a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; margin: auto; margin-bottom: 12%;">
+        <div class="your-order">
+          <div class="your-order-frame"><div class="text-your-order">Tvoja objednávka</div></div>
+          <div class="pizza-order-frame">
+            <img class="img-pizza-small" src="source_img/gazdovska.png" />
+            <div style="display: flex; flex-direction: column; margin-left: 3%;">
+              <div class="text-pizza-name">Pizza VENEZIA</div>
+              <div class="text-pizza-weight">580g</div>
+            </div>
+
+          </div>
+          <div class="text-order">.............................................................7,50€</div>
+          <div class="pizza-order-frame">
+            <img class="img-pizza-small" src="source_img/capri.png" />
+            <div style="display: flex; flex-direction: column; margin-left: 3%;">
+              <div class="text-pizza-name">Pizza Capri</div>
+              <div class="text-pizza-weight">550g</div>
+            </div>
+            
+          </div>      
+          <div class="text-order">...........................................................15,00€</div>
+          <div class="text-price-frame">
+            <div class="text-srv">Doprava</div>
+            <div class="text-price-srv">.............................................................1,99€</div>
+          </div>
+          <div class="text-price-frame">
+            <div class="text-price-srv">Servisný poplatok</div>
+            <div class="text-price-srv">............................................................0,50€</div>
+          </div>
+          <div class="price-total">
+            <div class="text-total-price">Celkom.................................................24,99€</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="footer">
+        <div class="socials">
+          <img class="youtube" src="source_img/youtube.png" />
+          <img class="img" src="source_img/facebook.png" />
+          <img class="img" src="source_img/instagram.png" />
+        </div>
+      </div>
+  </body>
+  <script src="script/script.js"></script>
+</html>

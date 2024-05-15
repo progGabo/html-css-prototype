@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="css/order.css" />
+  </head>
+  <body class="desktop">
+
+    <div class="container-popup" id="popup">
+      <div class="pop-up">
+        <div class="mail">Zadaj svoj email</div>
+        <input class="input-email" placeholder="Email"></input>
+        <a class="buttn" href="reg.html"> Pokračovať </a> 
+      </div>
+    </div>
+
+    <header class="header">
+      <a class="text-logo" href="maiin.html">
+        <div class="f-od">Food</div>
+      </a>
+      <div class="login text-login" style="margin-left: auto;">Prihlásiť sa</div>
+      
+      <div class="login text-login" onclick="popUp()">Registrovať</div>
+      <div class="shopping-bag-icon"></div>
+    </header>
+
+    <div class="menu-frame">
+      <div class="rest-info-frame">
+        <div class="text-rest-name">Pizza Borsalino</div>
+        <div class="text-rest-rating">4.5/5 (500+)</div>
+        <div class="search-bar">
+          <div class="text-search">Hľadať v ponuke</div>
+          <img class="search-icon" src="source_img/search-icon.png" />
+        </div>
+      </div>
+      
+      <div class="menu-frame-button">
+        <div class="menu-button"><div class="text-menu-button">Výhodné menu</div></div>
+        <div class="menu-button"><div class="text-menu-button">Obľúbené</div></div>
+        <div class="menu-button"><div class="text-menu-button">Pizza</div></div>
+        <div class="menu-button"><div class="text-menu-button">Burgery</div></div>
+        <div class="menu-button"><div class="text-menu-button">Nápoje</div></div>
+        <div class="menu-button"><div class="text-menu-button">Wrapy</div></div>
+      </div>
+    </div>
+
+    <div class="text-title">Najlepšie hodnotené</div>
+
+    <div class="pizza-frame-row">
+      <div class="pizza-offer-frame">
+        <img class="img-pizza" src="source_img/gazdovska.png" />
+        <div class="text-pizza-name">Pizza MARGHERITA</div>
+        <p class="text-pizza-info">
+          400g, drvené paradajky, syr Mozzarella, čerstvá bazalka<br />Alergény: (1,7)
+        </p>
+        <div class="button-frame">
+          <div class="button-buy text-buy">6,99€ Pridať</div>
+          <div class="button-conf">Upraviť</div>
+        </div>  
+      </div>
+
+      <div class="pizza-offer-frame">
+        <img class="img-pizza" src="source_img/venezia.png" />
+        <div class="text-pizza-name">Pizza VENEZIA</div>
+        <p class="text-pizza-info">
+          580g, drvené paradajky, syr Mozzarella, šťavnatá šunka, lahodná kukurica
+          Alergény: (1,7)<br />Alergény: (1,7)
+        </p>
+        <div class="button-frame">
+          <button class="button-buy text-buy" onclick="updateCart('shopList2', 'shopList2Price')">7,50€ Pridať</button>
+          <div class="button-conf">Upraviť</div>
+        </div>  
+      </div>
+
+      <div class="your-order">
+        <div class="frame">
+          <div class="your-order-frame"><div class="text-your-order">Tvoja objednávka</div></div>
+        </div>
+        <div class="pizza-order-frame" id="shopList1">
+          <img class="img-pizza-small" src="source_img/capri.png" />
+          <div style="display: flex; flex-direction: column; margin-left: 3%;">
+            <div class="text-pizza-name">Pizza Capri</div>
+            <div class="text-pizza-weight">550g</div>
+          </div>
+          <div class="mod-order-frame">
+            <div class="side-mod">
+              <div class="text-mod">-</div>
+            </div>
+            <div class="text-mod">1</div>
+            <div class="side-mod">
+              <div class="text-mod">+</div>
+            </div>
+          </div>
+        </div>  
+        
+        <div class="text-order" id="shopList1Price">.............................................................7,50€</div>
+
+        <div class="pizza-order-frame" id="shopList2">
+          <img class="img-pizza-small" src="source_img/gazdovska.png" />
+          <div style="display: flex; flex-direction: column; margin-left: 3%;">
+            <div class="text-pizza-name">Pizza VENEZIA</div>
+            <div class="text-pizza-weight">580g</div>
+          </div>
+
+          <div class="mod-order-frame">
+            <div class="side-mod">
+              <div class="text-mod">-</div>
+            </div>
+            <div class="text-mod" id="pizzaCount">1</div>
+            <div class="side-mod" onclick="updateCount()">
+              <div class="text-mod">+</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-order" id="shopList2Price">.............................................................7,50€</div> 
+
+        <div class="total-price-frame">
+          <p class="text-total-price" id="priceTotal">Suma celkom....................................................0€</p>
+          <a class="button-finnish" href="fillorder.html">Dokončiť</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pizza-frame-row">
+      <div class="pizza-offer-frame">
+        <img class="img-pizza" src="source_img/proscuitto.png" />
+        <div class="text-pizza-name">Pizza PROSCUITTO</div>
+        <p class="text-pizza-info">
+          580g, drvené paradajky, syr Mozzarella, proscuitto šunka, čierne olivy, syr Parmezán, rukola
+          Alergény: (1,7)<br />Alergény: (1,7)
+        </p>
+        <div class="button-frame">
+          <div class="button-buy text-buy">8,50€ Pridať</div>
+          <div class="button-conf">Upraviť</div>
+        </div>  
+      </div>
+
+
+      <div class="pizza-offer-frame">
+        <img class="img-pizza" src="source_img/capri.png" />
+        <div class="text-pizza-name">Pizza CAPRI</div>
+        <p class="text-pizza-info">
+          550g, drvené paradajky, syr Mozzarella, šťavnatá šunka, lahodná kukurica, čerstvé šampiňóny
+          Alergény: (1,7)<br />Alergény: (1,7)
+        </p>
+        <div class="button-frame">
+          <button class="button-buy text-buy" onclick="updateCart('shopList1', 'shopList1Price')">7,50€ Pridať</button>
+          <div class="button-conf">Upraviť</div>
+        </div>  
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="socials">
+        <img class="youtube" src="source_img/youtube.png" />
+        <img class="img" src="source_img/facebook.png" />
+        <img class="img" src="source_img/instagram.png" />
+      </div>
+    </div>
+
+  </body>
+  <script src="script/script.js"></script>
+</html>
